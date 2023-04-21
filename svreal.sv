@@ -756,7 +756,7 @@ module assertion_real #(
     always @(in) begin
         if (!((min <= `TO_REAL(in)) && (`TO_REAL(in) <= max))) begin
             $display("Real number %s with value %f out of range (%f to %f).", name, `TO_REAL(in), min, max);
-            $fatal;
+            //$fatal;  // not supported in synthesis
         end
     end
 
