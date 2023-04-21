@@ -1,0 +1,6 @@
+read_verilog -sv rc_model.sv
+hierarchy -check -top rc_model
+proc
+flatten
+opt -nosdff
+write_btor rc_model.btor
