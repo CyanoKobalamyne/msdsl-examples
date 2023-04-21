@@ -1050,7 +1050,7 @@ module sync_rom_real #(
     parameter integer addr_bits=1,
     parameter integer data_bits=1,
     parameter integer data_expt=1,
-    parameter file_path=""
+    parameter file_path
 ) (
     input wire logic [(addr_bits-1):0] addr,
     `OUTPUT_REAL(out),

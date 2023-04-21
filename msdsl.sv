@@ -349,7 +349,7 @@ endmodule
 module sync_rom_uint #(
     parameter integer addr_bits=1,
     parameter integer data_bits=1,
-    parameter file_path=""
+    parameter file_path
 ) (
     input wire logic [(addr_bits-1):0] addr,
     output wire logic [(data_bits-1):0] out,
