@@ -42,19 +42,9 @@
 // real number inputs, which is needed to automatically
 // compute exponents.  the the value returned is
 // int(ceil(log2(x)))
-function int clog2_math(input real x);
-    clog2_math = 0;
-    if (x > 0) begin
-        while (x < (2.0**(clog2_math))) begin
-            clog2_math = clog2_math - 1;
-        end
-        while (x > (2.0**(clog2_math))) begin
-            clog2_math = clog2_math + 1;
-        end
-    end
-endfunction
+`define CLOG2_MATH(x) $rtoi($ceil($ln(x) / $ln(2)))
 
-`define CALC_EXP(range, width) (clog2_math((real'(range))/((2.0**((width)-1))-1.0)))
+`define CALC_EXP(range, width) (`CLOG2_MATH(((range))/((2.0**((width)-1))-1.0)))
 
 `define MAX_MATH(a, b) \
     (((a) > (b)) ? (a) : (b))
