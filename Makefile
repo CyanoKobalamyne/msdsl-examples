@@ -7,7 +7,7 @@ all: rc_model.btor
 	python $< > $@
 
 synthesize_%.ys: make_synthesis_script.sh
-	sh $< $* > $@
+	sh $< $*.sv $* $*.btor > $@
 
 clean:
 	rm -rf *.btor rc_model.sv

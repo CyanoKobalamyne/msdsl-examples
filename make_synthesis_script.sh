@@ -3,11 +3,11 @@ cat <<EOF
 # https://github.com/upscale-project/pono/blob/b243cef/README.md#yosys-quick-start
 
 # Read input file
-read_verilog -formal -sv $1.sv
+read_verilog -formal -sv $1
 
 # Conservative elaboration of the top module
 # Runs hierarchy, proc, flatten, and some opt and memory steps
-prep -flatten -top $1
+prep -flatten -top $2
 
 # Ensure that assumptions hold at every state
 # If an assumption is flopped, you might see strange behavior at the last state
@@ -18,11 +18,11 @@ chformal -assume -early
 memory -nomap
 
 # Simulate reset signal
-sim -clock clk -reset rst -n 20 -rstlen 20 -w $1
+sim -clock clk -reset rst -n 20 -rstlen 20 -w $2
 
 # Turn all undriven signals into inputs
 setundef -undriven -expose
 
 # Write out file in BTOR2 format
-write_btor $1.btor
+write_btor $3
 EOF
