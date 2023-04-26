@@ -3,7 +3,7 @@ cat <<EOF
 # https://github.com/upscale-project/pono/blob/b243cef/README.md#yosys-quick-start
 
 # Read input file
-read_verilog -formal -sv $1
+read_verilog -formal -sv -Ilib $1
 
 # Conservative elaboration of the top module
 # Runs hierarchy, proc, flatten, and some opt and memory steps
