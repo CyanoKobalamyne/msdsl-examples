@@ -4,176 +4,182 @@
 3 input 1 rst ; rc_model.sv:17.22-17.25
 4 sort bitvec 2
 5 input 4 v_in ; rc_model.sv:14.92-14.96
-6 state 4 dff_real_v_out_i.q_mem
-7 output 6 v_out ; rc_model.sv:15.94-15.99
-8 sort bitvec 25
-9 sort bitvec 18
-10 const 9 011100111101000111
-11 sext 9 6 16
-12 mul 9 10 11
-13 slice 1 12 17 17
-14 slice 1 12 17 17
-15 concat 4 14 13
-16 slice 1 12 17 17
-17 sort bitvec 3
-18 concat 17 16 15
-19 slice 1 12 17 17
-20 sort bitvec 4
-21 concat 20 19 18
-22 slice 1 12 17 17
-23 sort bitvec 5
-24 concat 23 22 21
-25 slice 1 12 17 17
-26 sort bitvec 6
-27 concat 26 25 24
-28 slice 1 12 17 17
-29 sort bitvec 7
-30 concat 29 28 27
-31 slice 1 12 17 17
-32 sort bitvec 8
-33 concat 32 31 30
-34 slice 1 12 17 17
-35 sort bitvec 9
-36 concat 35 34 33
-37 slice 1 12 17 17
-38 sort bitvec 10
-39 concat 38 37 36
-40 slice 1 12 17 17
-41 sort bitvec 11
-42 concat 41 40 39
-43 slice 1 12 17 17
-44 sort bitvec 12
-45 concat 44 43 42
-46 slice 1 12 17 17
-47 sort bitvec 13
-48 concat 47 46 45
-49 slice 1 12 17 17
-50 sort bitvec 14
-51 concat 50 49 48
-52 slice 1 12 17 17
-53 sort bitvec 15
-54 concat 53 52 51
-55 slice 1 12 17 17
-56 sort bitvec 16
-57 concat 56 55 54
-58 slice 1 12 17 17
-59 sort bitvec 17
-60 concat 59 58 57
-61 slice 1 12 17 17
-62 concat 9 61 60
-63 slice 1 12 17 17
-64 sort bitvec 19
-65 concat 64 63 62
-66 slice 1 12 17 17
-67 sort bitvec 20
-68 concat 67 66 65
-69 slice 1 12 17 17
-70 sort bitvec 21
-71 concat 70 69 68
-72 slice 1 12 17 17
-73 sort bitvec 22
-74 concat 73 72 71
-75 slice 1 12 17 17
-76 sort bitvec 23
-77 concat 76 75 74
-78 slice 1 12 17 17
-79 sort bitvec 24
-80 concat 79 78 77
-81 slice 1 12 17 17
-82 concat 8 81 80
-83 uext 8 82 0 add_sub_real_tmp2_i.a ; rc_model.sv:22.787-22.871|svreal.sv:795.89-795.90
-84 uext 8 82 0 add_sub_real_tmp2_i.a_aligned ; rc_model.sv:22.787-22.871|svreal.sv:800.73-800.82
-85 uext 8 82 0 add_sub_real_tmp2_i.assign_real_a_aligned_i.in ; rc_model.sv:22.787-22.871|svreal.sv:769.90-769.92|svreal.sv:803.300-803.374
-86 uext 8 82 0 add_sub_real_tmp2_i.assign_real_a_aligned_i.out ; rc_model.sv:22.787-22.871|svreal.sv:770.92-770.95|svreal.sv:803.300-803.374
-87 const 9 011000010111001001
-88 sext 9 5 16
-89 mul 9 87 88
-90 slice 1 89 17 17
-91 slice 1 89 17 17
-92 concat 4 91 90
-93 slice 1 89 17 17
-94 concat 17 93 92
-95 slice 1 89 17 17
-96 concat 20 95 94
-97 slice 1 89 17 17
-98 concat 23 97 96
-99 slice 1 89 17 17
-100 concat 26 99 98
-101 slice 1 89 17 17
-102 concat 29 101 100
-103 slice 1 89 17 17
-104 concat 32 103 102
-105 slice 1 89 17 17
-106 concat 35 105 104
-107 slice 1 89 17 17
-108 concat 38 107 106
-109 slice 1 89 17 17
-110 concat 41 109 108
-111 slice 1 89 17 17
-112 concat 44 111 110
-113 slice 1 89 17 17
-114 concat 47 113 112
-115 slice 1 89 17 17
-116 concat 50 115 114
-117 slice 1 89 17 17
-118 concat 53 117 116
-119 slice 1 89 17 17
-120 concat 56 119 118
-121 slice 1 89 17 17
-122 concat 59 121 120
-123 slice 1 89 17 17
-124 concat 9 123 122
-125 slice 1 89 17 17
-126 concat 64 125 124
-127 slice 1 89 17 17
-128 concat 67 127 126
-129 slice 1 89 17 17
-130 concat 70 129 128
-131 slice 1 89 17 17
-132 concat 73 131 130
-133 slice 1 89 17 17
-134 concat 76 133 132
-135 slice 1 89 17 17
-136 concat 79 135 134
-137 slice 1 89 17 17
-138 concat 8 137 136
-139 uext 8 138 0 add_sub_real_tmp2_i.assign_real_b_aligned_i.in ; rc_model.sv:22.787-22.871|svreal.sv:769.90-769.92|svreal.sv:804.302-804.376
-140 uext 8 138 0 add_sub_real_tmp2_i.assign_real_b_aligned_i.out ; rc_model.sv:22.787-22.871|svreal.sv:770.92-770.95|svreal.sv:804.302-804.376
-141 uext 8 138 0 add_sub_real_tmp2_i.b ; rc_model.sv:22.787-22.871|svreal.sv:796.89-796.90
-142 uext 8 138 0 add_sub_real_tmp2_i.b_aligned ; rc_model.sv:22.787-22.871|svreal.sv:801.73-801.82
-143 add 8 82 138
-144 uext 8 143 0 add_sub_real_tmp2_i.c ; rc_model.sv:22.787-22.871|svreal.sv:797.90-797.91
-145 uext 8 143 0 dff_real_v_out_i.assign_real_d_aligned_i.in ; rc_model.sv:23.306-23.430|svreal.sv:769.90-769.92|svreal.sv:1030.302-1030.376
-146 slice 4 143 1 0
-147 uext 4 146 0 dff_real_v_out_i.assign_real_d_aligned_i.out ; rc_model.sv:23.306-23.430|svreal.sv:770.92-770.95|svreal.sv:1030.302-1030.376
-148 uext 4 6 0 dff_real_v_out_i.assign_real_q_i.in ; rc_model.sv:23.306-23.430|svreal.sv:769.90-769.92|svreal.sv:1026.290-1026.352
-149 uext 4 6 0 dff_real_v_out_i.assign_real_q_i.out ; rc_model.sv:23.306-23.430|svreal.sv:770.92-770.95|svreal.sv:1026.290-1026.352
-150 const 1 1
-151 uext 1 150 0 dff_real_v_out_i.cke ; rc_model.sv:23.306-23.430|svreal.sv:1021.22-1021.25
-152 uext 1 2 0 dff_real_v_out_i.clk ; rc_model.sv:23.306-23.430|svreal.sv:1020.22-1020.25
-153 uext 8 143 0 dff_real_v_out_i.d ; rc_model.sv:23.306-23.430|svreal.sv:1017.89-1017.90
-154 uext 4 146 0 dff_real_v_out_i.d_aligned ; rc_model.sv:23.306-23.430|svreal.sv:1029.73-1029.82
-155 const 4 00
-156 uext 4 155 0 dff_real_v_out_i.init_aligned ; rc_model.sv:23.306-23.430|svreal.sv:1033.73-1033.85
-157 uext 4 6 0 dff_real_v_out_i.q ; rc_model.sv:23.306-23.430|svreal.sv:1018.90-1018.91
-158 uext 1 3 0 dff_real_v_out_i.rst ; rc_model.sv:23.306-23.430|svreal.sv:1019.22-1019.25
-159 uext 9 10 0 mul_real_tmp0_i.a ; rc_model.sv:20.1591-20.1680|svreal.sv:880.89-880.90
-160 uext 9 12 0 mul_real_tmp0_i.assign_real_c_i.in ; rc_model.sv:20.1591-20.1680|svreal.sv:769.90-769.92|svreal.sv:897.287-897.348
-161 uext 8 82 0 mul_real_tmp0_i.assign_real_c_i.out ; rc_model.sv:20.1591-20.1680|svreal.sv:770.92-770.95|svreal.sv:897.287-897.348
-162 uext 4 6 0 mul_real_tmp0_i.b ; rc_model.sv:20.1591-20.1680|svreal.sv:881.89-881.90
-163 uext 8 82 0 mul_real_tmp0_i.c ; rc_model.sv:20.1591-20.1680|svreal.sv:882.90-882.91
-164 uext 9 12 0 mul_real_tmp0_i.prod ; rc_model.sv:20.1591-20.1680|svreal.sv:891.95-891.99
-165 uext 9 87 0 mul_real_tmp1_i.a ; rc_model.sv:21.1599-21.1687|svreal.sv:880.89-880.90
-166 uext 9 89 0 mul_real_tmp1_i.assign_real_c_i.in ; rc_model.sv:21.1599-21.1687|svreal.sv:769.90-769.92|svreal.sv:897.287-897.348
-167 uext 8 138 0 mul_real_tmp1_i.assign_real_c_i.out ; rc_model.sv:21.1599-21.1687|svreal.sv:770.92-770.95|svreal.sv:897.287-897.348
-168 uext 4 5 0 mul_real_tmp1_i.b ; rc_model.sv:21.1599-21.1687|svreal.sv:881.89-881.90
-169 uext 8 138 0 mul_real_tmp1_i.c ; rc_model.sv:21.1599-21.1687|svreal.sv:882.90-882.91
-170 uext 9 89 0 mul_real_tmp1_i.prod ; rc_model.sv:21.1599-21.1687|svreal.sv:891.95-891.99
-171 uext 8 82 0 tmp0 ; rc_model.sv:20.73-20.77
-172 uext 8 138 0 tmp1 ; rc_model.sv:21.73-21.77
-173 uext 8 143 0 tmp2 ; rc_model.sv:22.73-22.77
-174 uext 9 10 0 zzz_tmp_tmp0 ; rc_model.sv:20.584-20.596
-175 uext 9 87 0 zzz_tmp_tmp1 ; rc_model.sv:21.588-21.600
-176 ite 4 3 155 146
-177 next 4 6 176
+6 const 4 00
+7 state 4 dff_real_v_out_i.q_mem
+8 init 4 7 6
+9 output 7 v_out ; rc_model.sv:15.94-15.99
+10 sort bitvec 25
+11 sort bitvec 18
+12 const 11 011100111101000111
+13 sext 11 7 16
+14 mul 11 12 13
+15 slice 1 14 17 17
+16 slice 1 14 17 17
+17 concat 4 16 15
+18 slice 1 14 17 17
+19 sort bitvec 3
+20 concat 19 18 17
+21 slice 1 14 17 17
+22 sort bitvec 4
+23 concat 22 21 20
+24 slice 1 14 17 17
+25 sort bitvec 5
+26 concat 25 24 23
+27 slice 1 14 17 17
+28 sort bitvec 6
+29 concat 28 27 26
+30 slice 1 14 17 17
+31 sort bitvec 7
+32 concat 31 30 29
+33 slice 1 14 17 17
+34 sort bitvec 8
+35 concat 34 33 32
+36 slice 1 14 17 17
+37 sort bitvec 9
+38 concat 37 36 35
+39 slice 1 14 17 17
+40 sort bitvec 10
+41 concat 40 39 38
+42 slice 1 14 17 17
+43 sort bitvec 11
+44 concat 43 42 41
+45 slice 1 14 17 17
+46 sort bitvec 12
+47 concat 46 45 44
+48 slice 1 14 17 17
+49 sort bitvec 13
+50 concat 49 48 47
+51 slice 1 14 17 17
+52 sort bitvec 14
+53 concat 52 51 50
+54 slice 1 14 17 17
+55 sort bitvec 15
+56 concat 55 54 53
+57 slice 1 14 17 17
+58 sort bitvec 16
+59 concat 58 57 56
+60 slice 1 14 17 17
+61 sort bitvec 17
+62 concat 61 60 59
+63 slice 1 14 17 17
+64 concat 11 63 62
+65 slice 1 14 17 17
+66 sort bitvec 19
+67 concat 66 65 64
+68 slice 1 14 17 17
+69 sort bitvec 20
+70 concat 69 68 67
+71 slice 1 14 17 17
+72 sort bitvec 21
+73 concat 72 71 70
+74 slice 1 14 17 17
+75 sort bitvec 22
+76 concat 75 74 73
+77 slice 1 14 17 17
+78 sort bitvec 23
+79 concat 78 77 76
+80 slice 1 14 17 17
+81 sort bitvec 24
+82 concat 81 80 79
+83 slice 1 14 17 17
+84 concat 10 83 82
+85 uext 10 84 0 add_sub_real_tmp2_i.a ; rc_model.sv:22.787-22.871|svreal.sv:795.89-795.90
+86 uext 10 84 0 add_sub_real_tmp2_i.a_aligned ; rc_model.sv:22.787-22.871|svreal.sv:800.73-800.82
+87 uext 10 84 0 add_sub_real_tmp2_i.assign_real_a_aligned_i.in ; rc_model.sv:22.787-22.871|svreal.sv:769.90-769.92|svreal.sv:803.300-803.374
+88 uext 10 84 0 add_sub_real_tmp2_i.assign_real_a_aligned_i.out ; rc_model.sv:22.787-22.871|svreal.sv:770.92-770.95|svreal.sv:803.300-803.374
+89 const 11 011000010111001001
+90 sext 11 5 16
+91 mul 11 89 90
+92 slice 1 91 17 17
+93 slice 1 91 17 17
+94 concat 4 93 92
+95 slice 1 91 17 17
+96 concat 19 95 94
+97 slice 1 91 17 17
+98 concat 22 97 96
+99 slice 1 91 17 17
+100 concat 25 99 98
+101 slice 1 91 17 17
+102 concat 28 101 100
+103 slice 1 91 17 17
+104 concat 31 103 102
+105 slice 1 91 17 17
+106 concat 34 105 104
+107 slice 1 91 17 17
+108 concat 37 107 106
+109 slice 1 91 17 17
+110 concat 40 109 108
+111 slice 1 91 17 17
+112 concat 43 111 110
+113 slice 1 91 17 17
+114 concat 46 113 112
+115 slice 1 91 17 17
+116 concat 49 115 114
+117 slice 1 91 17 17
+118 concat 52 117 116
+119 slice 1 91 17 17
+120 concat 55 119 118
+121 slice 1 91 17 17
+122 concat 58 121 120
+123 slice 1 91 17 17
+124 concat 61 123 122
+125 slice 1 91 17 17
+126 concat 11 125 124
+127 slice 1 91 17 17
+128 concat 66 127 126
+129 slice 1 91 17 17
+130 concat 69 129 128
+131 slice 1 91 17 17
+132 concat 72 131 130
+133 slice 1 91 17 17
+134 concat 75 133 132
+135 slice 1 91 17 17
+136 concat 78 135 134
+137 slice 1 91 17 17
+138 concat 81 137 136
+139 slice 1 91 17 17
+140 concat 10 139 138
+141 uext 10 140 0 add_sub_real_tmp2_i.assign_real_b_aligned_i.in ; rc_model.sv:22.787-22.871|svreal.sv:769.90-769.92|svreal.sv:804.302-804.376
+142 uext 10 140 0 add_sub_real_tmp2_i.assign_real_b_aligned_i.out ; rc_model.sv:22.787-22.871|svreal.sv:770.92-770.95|svreal.sv:804.302-804.376
+143 uext 10 140 0 add_sub_real_tmp2_i.b ; rc_model.sv:22.787-22.871|svreal.sv:796.89-796.90
+144 uext 10 140 0 add_sub_real_tmp2_i.b_aligned ; rc_model.sv:22.787-22.871|svreal.sv:801.73-801.82
+145 slice 1 14 17 17
+146 sext 4 145 1
+147 slice 1 91 17 17
+148 sext 4 147 1
+149 add 4 146 148
+150 input 78
+151 concat 10 150 149
+152 uext 10 151 0 add_sub_real_tmp2_i.c ; rc_model.sv:22.787-22.871|svreal.sv:797.90-797.91
+153 uext 10 151 0 dff_real_v_out_i.assign_real_d_aligned_i.in ; rc_model.sv:23.306-23.430|svreal.sv:769.90-769.92|svreal.sv:1030.302-1030.376
+154 uext 4 149 0 dff_real_v_out_i.assign_real_d_aligned_i.out ; rc_model.sv:23.306-23.430|svreal.sv:770.92-770.95|svreal.sv:1030.302-1030.376
+155 uext 4 7 0 dff_real_v_out_i.assign_real_q_i.in ; rc_model.sv:23.306-23.430|svreal.sv:769.90-769.92|svreal.sv:1026.290-1026.352
+156 uext 4 7 0 dff_real_v_out_i.assign_real_q_i.out ; rc_model.sv:23.306-23.430|svreal.sv:770.92-770.95|svreal.sv:1026.290-1026.352
+157 const 1 1
+158 uext 1 157 0 dff_real_v_out_i.cke ; rc_model.sv:23.306-23.430|svreal.sv:1021.22-1021.25
+159 uext 1 2 0 dff_real_v_out_i.clk ; rc_model.sv:23.306-23.430|svreal.sv:1020.22-1020.25
+160 uext 10 151 0 dff_real_v_out_i.d ; rc_model.sv:23.306-23.430|svreal.sv:1017.89-1017.90
+161 uext 4 149 0 dff_real_v_out_i.d_aligned ; rc_model.sv:23.306-23.430|svreal.sv:1029.73-1029.82
+162 uext 4 6 0 dff_real_v_out_i.init_aligned ; rc_model.sv:23.306-23.430|svreal.sv:1033.73-1033.85
+163 uext 4 7 0 dff_real_v_out_i.q ; rc_model.sv:23.306-23.430|svreal.sv:1018.90-1018.91
+164 uext 1 3 0 dff_real_v_out_i.rst ; rc_model.sv:23.306-23.430|svreal.sv:1019.22-1019.25
+165 uext 11 12 0 mul_real_tmp0_i.a ; rc_model.sv:20.1591-20.1680|svreal.sv:880.89-880.90
+166 uext 11 14 0 mul_real_tmp0_i.assign_real_c_i.in ; rc_model.sv:20.1591-20.1680|svreal.sv:769.90-769.92|svreal.sv:897.287-897.348
+167 uext 10 84 0 mul_real_tmp0_i.assign_real_c_i.out ; rc_model.sv:20.1591-20.1680|svreal.sv:770.92-770.95|svreal.sv:897.287-897.348
+168 uext 4 7 0 mul_real_tmp0_i.b ; rc_model.sv:20.1591-20.1680|svreal.sv:881.89-881.90
+169 uext 10 84 0 mul_real_tmp0_i.c ; rc_model.sv:20.1591-20.1680|svreal.sv:882.90-882.91
+170 uext 11 14 0 mul_real_tmp0_i.prod ; rc_model.sv:20.1591-20.1680|svreal.sv:891.95-891.99
+171 uext 11 89 0 mul_real_tmp1_i.a ; rc_model.sv:21.1599-21.1687|svreal.sv:880.89-880.90
+172 uext 11 91 0 mul_real_tmp1_i.assign_real_c_i.in ; rc_model.sv:21.1599-21.1687|svreal.sv:769.90-769.92|svreal.sv:897.287-897.348
+173 uext 10 140 0 mul_real_tmp1_i.assign_real_c_i.out ; rc_model.sv:21.1599-21.1687|svreal.sv:770.92-770.95|svreal.sv:897.287-897.348
+174 uext 4 5 0 mul_real_tmp1_i.b ; rc_model.sv:21.1599-21.1687|svreal.sv:881.89-881.90
+175 uext 10 140 0 mul_real_tmp1_i.c ; rc_model.sv:21.1599-21.1687|svreal.sv:882.90-882.91
+176 uext 11 91 0 mul_real_tmp1_i.prod ; rc_model.sv:21.1599-21.1687|svreal.sv:891.95-891.99
+177 uext 10 84 0 tmp0 ; rc_model.sv:20.73-20.77
+178 uext 10 140 0 tmp1 ; rc_model.sv:21.73-21.77
+179 uext 10 151 0 tmp2 ; rc_model.sv:22.73-22.77
+180 uext 11 12 0 zzz_tmp_tmp0 ; rc_model.sv:20.584-20.596
+181 uext 11 89 0 zzz_tmp_tmp1 ; rc_model.sv:21.588-21.600
+182 ite 4 3 6 149
+183 next 4 7 182
 ; end of yosys output
