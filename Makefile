@@ -6,10 +6,10 @@ $(BUILDDIR)/%.btor: synthesize_%.ys %.sv
 	mkdir -p $(@D)
 	yosys $<
 
-%_model.sv: generate_%_model.py Makefile
+%_model.sv: generate_%_model.py
 	python $< > $@
 
-synthesize_%.ys: make_synthesis_script.sh Makefile
+synthesize_%.ys: make_synthesis_script.sh
 	sh $< $*.sv $* $(BUILDDIR)/$*.btor > $@
 
 clean:
