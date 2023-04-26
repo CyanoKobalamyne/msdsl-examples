@@ -1,16 +1,19 @@
-all: rc_model.btor
+BUILDDIR = gen
 
-%.btor: synthesize_%.ys %.sv
+all: $(BUILDDIR)/rc_model.btor
+
+$(BUILDDIR)/%.btor: synthesize_%.ys %.sv
+	mkdir -p $(@D)
 	yosys $<
 
 %.sv: generate_%.py
 	python $< > $@
 
 synthesize_%.ys: make_synthesis_script.sh
-	sh $< $*.sv $* $*.btor > $@
+	sh $< $*.sv $* $(BUILDDIR)/$*.btor > $@
 
 clean:
-	rm -rf *.btor rc_model.sv
+	rm -rf $(BUILDDIR) rc_model.sv
 
 .PHONY: all clean
 
