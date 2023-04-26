@@ -13,7 +13,10 @@ synthesize_%.ys: make_synthesis_script.sh Makefile
 	sh $< $*.sv $* $(BUILDDIR)/$*.btor > $@
 
 clean:
-	rm -rf $(BUILDDIR) *_model.sv
+	rm -rf $(BUILDDIR)
+
+cleanall:
+	rm -rf *_model.sv
 
 .PHONY: all clean
 
