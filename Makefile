@@ -1,8 +1,12 @@
 BUILDDIR = gen
+MODEL_SCRIPTS = $(wildcard generate_*_model.py)
+MODEL_SOURCES = $(patsubst generate_%.py,%.sv,$(MODEL_SCRIPTS))
+TOP_SOURCES = $(filter-out $(MODEL_SOURCES),$(wildcard *.sv))
+TOP_BTORS = $(patsubst %.sv,$(BUILDDIR)/%.btor,$(TOP_SOURCES))
 
-all: $(BUILDDIR)/rc_model.btor
+all: $(TOP_BTORS)
 
-$(BUILDDIR)/%.btor: $(BUILDDIR)/synthesize_%.ys %.sv
+$(BUILDDIR)/%.btor: $(BUILDDIR)/synthesize_%.ys %.sv $(MODEL_SOURCES)
 	mkdir -p $(@D)
 	yosys $<
 
