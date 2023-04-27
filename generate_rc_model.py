@@ -1,4 +1,4 @@
-from msdsl import *
+from msdsl import MixedSignalModel, VerilogGenerator
 from math import exp
 
 r, c, dt = 1e3, 1e-9, 0.1e-6
