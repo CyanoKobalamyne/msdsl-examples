@@ -16,7 +16,7 @@ $(BUILDDIR)/synthesize_%.ys: make_synthesis_script.sh
 clean:
 	rm -rf $(BUILDDIR)
 
-cleanall:
+cleanall: clean
 	rm -rf *_model.sv
 
 .PHONY: all clean
