@@ -2,14 +2,15 @@ BUILDDIR = gen
 
 all: $(BUILDDIR)/rc_model.btor
 
-$(BUILDDIR)/%.btor: synthesize_%.ys %.sv
+$(BUILDDIR)/%.btor: $(BUILDDIR)/synthesize_%.ys %.sv
 	mkdir -p $(@D)
 	yosys $<
 
 %_model.sv: generate_%_model.py
 	python $< > $@
 
-synthesize_%.ys: make_synthesis_script.sh
+$(BUILDDIR)/synthesize_%.ys: make_synthesis_script.sh
+	mkdir -p $(@D)
 	sh $< $*.sv $* $(BUILDDIR)/$*.btor > $@
 
 clean:
