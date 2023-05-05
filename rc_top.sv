@@ -8,7 +8,6 @@ module rc_top #(
     `OUTPUT_REAL(result)
 );
   `MAKE_CONST_REAL(1.0, in);
-  `MAKE_REAL(result, 10.0);
 
   rc_model #(
       `PASS_REAL(v_in, in),
