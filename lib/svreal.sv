@@ -91,10 +91,14 @@
             
 // module ports
 
+`define DEFAULT_RANGE_REAL 16.0
+`define DEFAULT_WIDTH_REAL `LONG_WIDTH_REAL
+`define DEFAULT_EXPONENT_REAL `CALC_EXP(`DEFAULT_RANGE_REAL, `DEFAULT_WIDTH_REAL)
+
 `define DECL_REAL(port) \
-    parameter real `RANGE_PARAM_REAL(port) = 0, \
-    parameter integer `WIDTH_PARAM_REAL(port) = 0, \
-    parameter integer `EXPONENT_PARAM_REAL(port) = 0
+    parameter real `RANGE_PARAM_REAL(port) = `DEFAULT_RANGE_REAL, \
+    parameter integer `WIDTH_PARAM_REAL(port) = `DEFAULT_WIDTH_REAL, \
+    parameter integer `EXPONENT_PARAM_REAL(port) = `DEFAULT_EXPONENT_REAL
 
 `define PASS_REAL(port, name) \
     .`RANGE_PARAM_REAL(port)(`RANGE_PARAM_REAL(name)), \
