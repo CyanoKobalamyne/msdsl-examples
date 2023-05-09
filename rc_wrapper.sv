@@ -1,6 +1,6 @@
 `include "rc_model.sv"
 
-module rc_top #(
+module rc_wrapper #(
     `DECL_REAL(result)
 ) (
     input wire logic clk,
