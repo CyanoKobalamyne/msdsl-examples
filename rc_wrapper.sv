@@ -17,7 +17,7 @@ module rc_wrapper #(
   `MAKE_CONST_REAL(2.0, val);
   `LT_REAL(result, val, prop);
   always @* begin
-      a1: assert (prop);
+    assert (prop);
   end
 
 endmodule
