@@ -10,11 +10,11 @@ module rc_cmp_width_wrapper(
 
   rc_model #(
       `PASS_REAL(v_in, v_in),
-      `PASS_REAL(v_out, v_out_1),
+      `PASS_REAL(v_out, v_out_1)
   ) model_1(.v_in(v_in), .v_out(v_out_1), .clk(clk), .rst(rst));
   rc_model #(
       `PASS_REAL(v_in, v_in),
-      `PASS_REAL(v_out, v_out_2),
+      `PASS_REAL(v_out, v_out_2)
   ) model_2(.v_in(v_in), .v_out(v_out_2), .clk(clk), .rst(rst));
 
   `EQ_REAL(v_out_1, v_out_2, prop);
