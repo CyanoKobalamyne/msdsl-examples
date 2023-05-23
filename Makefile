@@ -13,7 +13,7 @@ all: $(BTOR_FILES) $(TESTBENCH_OUTPUTS)
 %.vcd: %.vvp
 	./$<
 
-$(BUILDDIR)/%.vvp: %.sv $(LIB_SOURCES)
+$(BUILDDIR)/%.vvp: %.sv $(LIB_SOURCES) $(WRAPPER_SOURCES)
 	iverilog -g2005-sv -Ilib -D'DUMP_FILE_PATH="$(BUILDDIR)/$*.vcd"' -s $* -o $@ $<
 
 $(BUILDDIR)/%.btor: $(BUILDDIR)/synthesize_%.ys %.sv $(MODEL_SOURCES) $(LIB_SOURCES)
