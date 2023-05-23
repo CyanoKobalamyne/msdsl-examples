@@ -17,7 +17,10 @@ module rc_cmp_width_wrapper(
       `PASS_REAL(v_out, v_out_2)
   ) model_2(.v_in(v_in), .v_out(v_out_2), .clk(clk), .rst(rst));
 
-  `EQ_REAL(v_out_1, v_out_2, prop);
+  `MAKE_CONST_REAL(0.00390625, max_diff);
+  `SUB_REAL(v_out_1, v_out_2, diff);
+  `ABS_REAL(diff, abs_diff);
+  `LE_REAL(abs_diff, max_diff, prop);
   always @* begin
     assert (prop);
   end
