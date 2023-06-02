@@ -1,5 +1,6 @@
-from msdsl import MixedSignalModel, VerilogGenerator
 from math import exp
+
+from msdsl import MixedSignalModel, VerilogGenerator
 
 r, c, dt = 1e3, 1e-9, 0.1e-6
 m = MixedSignalModel("rc_model")
