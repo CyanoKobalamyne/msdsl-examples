@@ -10,4 +10,6 @@ clk = m.add_digital_input("clk")
 rst = m.add_digital_input("rst")
 a = exp(-dt / (r * c))
 m.set_next_cycle(y, a * y + (1 - a) * x, clk=clk, rst=rst)
-m.compile_and_print(VerilogGenerator())
+
+if __name__ == "__main__":
+    m.compile_and_print(VerilogGenerator())
