@@ -1,10 +1,12 @@
 `include "rc_model.sv"
 
-module rc_eq_wrapper(
+module rc_eq_wrapper #(
+    `DECL_REAL(v_in)
+) (
+    `INPUT_REAL(v_in),
     input wire logic clk,
     input wire logic rst
 );
-  `MAKE_CONST_REAL(1.0, v_in);
   `MAKE_REAL(v_out_1, 16.0);
   `MAKE_REAL(v_out_2, 16.0);
 
