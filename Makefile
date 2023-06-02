@@ -1,6 +1,7 @@
 BUILDDIR = gen
 MODEL_SCRIPTS = $(wildcard generate_*_model.py)
 MODEL_SOURCES = $(patsubst generate_%.py,%.sv,$(MODEL_SCRIPTS))
+MODEL_SOURCES += $(patsubst generate_%.py,%_slow.sv,$(MODEL_SCRIPTS))
 WRAPPER_SOURCES = $(wildcard *_wrapper.sv)
 BTOR_FILES = $(patsubst %.sv,$(BUILDDIR)/%.btor,$(WRAPPER_SOURCES))
 TESTBENCH_SOURCES = $(wildcard *_testbench.sv)
@@ -23,6 +24,9 @@ $(BUILDDIR)/%.btor: $(BUILDDIR)/synthesize_%.ys %.sv $(MODEL_SOURCES) $(LIB_SOUR
 %_model.sv: generate_%_model.py
 	python $< > $@
 
+%_model_slow.sv: generate_%_model.py
+	python $< --slow > $@
+
 $(BUILDDIR)/synthesize_%.ys: make_synthesis_script.sh
 	mkdir -p $(@D)
 	sh $< $*.sv $* $(BUILDDIR)/$*.btor > $@
@@ -31,7 +35,7 @@ clean:
 	rm -rf $(BUILDDIR)
 
 cleanall: clean
-	rm -rf *_model.sv
+	rm -rf *_model.sv *_model_slow.sv
 
 .PHONY: all clean
 
