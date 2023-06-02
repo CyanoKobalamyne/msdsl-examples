@@ -1,1 +1,4 @@
 gen/
+
+*_model.sv
+*_model_slow.sv
