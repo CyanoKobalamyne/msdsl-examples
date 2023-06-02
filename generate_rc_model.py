@@ -1,9 +1,18 @@
 from math import exp
+import sys
 
 from msdsl import MixedSignalModel, VerilogGenerator
 
-r, c, dt = 1e3, 1e-9, 0.1e-6
-m = MixedSignalModel("rc_model")
+name = "rc_model"
+r, c = 1e3, 1e-9
+
+if "--slow" in sys.argv[1:]:
+    dt = 0.2e-6  # μs
+    name += "_slow"
+else:
+    dt = 0.1e-6  # μs
+
+m = MixedSignalModel(name)
 x = m.add_analog_input("v_in")
 y = m.add_analog_output("v_out")
 clk = m.add_digital_input("clk")
